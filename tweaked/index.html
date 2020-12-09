@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="https://raw.githubusercontent.com/Trent112232/apple-webapp/main/manifest.json">
+<link rel="apple-touch-icon" href="https://cdn.discordapp.com/attachments/385519229606035468/781811750420086804/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/385519229606035468/779782695798046720/624807220282130442.gif">
+<title>IPAStore</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style>
+#rgb_bg { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: rgb(66, 66, 66);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+</style>
+<style>
+.button_download {
+    width: 400px;
+    font-size: 50px;
+    background: rgb(0, 132, 255);
+    color: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+.button_get {
+    width: 100px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.521);
+    border-color: rgb(0, 132, 255);
+    color: rgb(0, 132, 255);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: solid;
+    padding: 20px;
+}
+.button_refresh {
+    width: 300px;
+    font-size: 40px;
+    background: linear-gradient(rgb(0, 255, 200), rgb(0, 255, 136));
+    color: rgb(0, 0, 0);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+.button_download:hover {
+  background-color: #0066ff;
+  color: white;
+}
+.title_app {
+    color: rgb(255, 255, 255);
+	font-family:verdana;
+    font-weight:bold;
+    font-size: 50px;
+    margin-left: 20px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+hr.solid_2 {
+  border-top: 3px solid #bbb;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+hr.solid_3 {
+  border-top: 3px solid #bbb;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+.app_info {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 50px;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.menu_back {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.menu_back:hover {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.app_desc {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 35px;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.announcement_box {
+    width:700px;height:700px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -moz-box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -o-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    border-radius:110px;
+}
+.title_box {
+    width:800px;height:200px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -moz-box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -o-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    border-radius:110px;
+}
+</style>
+<style>
+.app_box {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,#d10015, #af008f);
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px #d10015a1;
+    -moz-box-shadow: 0px 0px 45px #d10015a1;
+    -webkit-box-shadow: 0px 0px 45px #d10015a1;
+    -o-box-shadow: 0px 0px 45px #d10015a1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_alt {
+    font-size: 40px;
+    background: linear-gradient(to right,#d10015, #af008f);
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px #d10015a1;
+    -moz-box-shadow: 0px 0px 45px #d10015a1;
+    -webkit-box-shadow: 0px 0px 45px #d10015a1;
+    -o-box-shadow: 0px 0px 45px #d10015a1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<style>
+.navbar {
+    width: 800px;
+    height: 117px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgba(143, 143, 143, 0.904), rgb(143, 143, 143, 0.904));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(92, 92, 92, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    padding: 20px;
+    text-align: center;
+    margin-left: 82px;
+    margin-right: auto;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+}
+.fade {
+  margin: 50px;
+  padding: 50px;
+  background-color: lightgreen;
+  opacity: 1;
+}
+</style>
+</head>
+<body style="background-color: rgb(66, 66, 66);">
+<div id="rgb_bg" style="text-align:center;">
+<br><br><br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/781947222778052658/title.png" alt="IPAStore" width="800px" height="700px" class="title_box">
+<br><br><br><br>
+<hr class="solid_2">
+<button class="button button_refresh" onClick="window.location.reload();">Refresh IPAStore</button>
+<br><br>
+<hr class="solid_2">
+<br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/782011429204393994/tweaked_title.png" alt="Tweaked Apps" class="app_box_alt">
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://cdn.discordapp.com/attachments/523529891619274773/781984250080657418/uV8RaXm4VCOvJYScbv1ZNi5UhMPLxmY4LobG4NTt9SRM9a8jIcvKJzNMsLlVvrk3NF9s8VfLufWP8CJlQLkF-SKTIgf6Pn8C8JmK.png" width="100" height="100">
+    <span class="title_app">Twitch++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/twitch_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh6.googleusercontent.com/XMGWBxt7ll1KKpsT9l7JyxZi9lrGAfE-47m17-o7r4xmfuin48Hsd7I3soVyO1M6EbZ9qLOnowjXYbjlLAuYKsWewwL96wJD39b1eIvO7g0D-ndd8xh_rKigXvVO6nsU3Ec=w73-h73" width="100" height="100">
+    <span class="title_app">Reddit++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/reddit_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/PFt9b_NtpIxhP4oKx6vcKVl8D5xhr6--W9Em1n18CHx6qBUWrqb_dofW0CACCwl8CG4SoOL-3aF-xF54wi6_kdUEXXheCxeic29nr6Juk3qkK8TdCuKPtKtmmICoUufERFclfAQETQ=w73-h73" width="100" height="100">
+    <span class="title_app">Youtube++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/youtube_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/VpwJ2Je-qCuN2U_485Kbc9k3e9VQPocBpSnUazx7QW3W8fBbxKn0opY-fYAjGS5bTG2eeva3jFUxc9Do03oco4cj1njGZH3Z_y5Kiju3wN0WLa56atorZp_visPkNupEDqFD0AaMxA=w73-h73" width="100" height="100">
+    <span class="title_app">TikTok++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/tiktok_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/De_W9O9HX4nbnuzOoUA9TAkGsr5fNjEhujnvgQtMyKtL4Irjpjza6YY3iYfMGj2L_YOU_Qm0YvwECGmheTsQbswy1a3VqIyVneLOMCQzMN8VO10cJHdhNvQhgxObDGbMO9Cp74n8TA=w73-h73" width="100" height="100">
+    <span class="title_app">Spotify++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/spotify_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://cdn.discordapp.com/attachments/523529891619274773/785775437183451167/instagram.png" width="100" height="100">
+    <span class="title_app">Instagram Rhino&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/instagram_rhino.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/-Sy6xCdcNxF-8C3QsbePB-jrV5A-pmjMkUsFWDnihcKRUAw6SFaquw1tJsWmTvfYlwl9v1JtlPT3rfrYFdLrTLO9oqNExEDgdFaFetsWB8hK7HAnmh7ukRoqExW6iu_42QGCUYH6cw=w73-h73" width="100" height="100">
+    <span class="title_app">Twitter++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/twitter_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh5.googleusercontent.com/rRNVTzSAmnTGjsiutKKY1QhKpyqxs1G1QDCrhz-DzADYruV_nWBX_oreoBsTQwV79vFzkaFZOA70m5_CZVQ_JfLPcndmeYBtmMA_2Urhdn6bSrKvkD9yXLnwkUTCPWlFXUIzym9CmQ=w73-h73" width="100" height="100">
+    <span class="title_app">Facebook++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/facebook_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh6.googleusercontent.com/BaP6L3nd_f5UaQaRbVE9QbbfEvHRKteLRbHubFl36Nv4RZWBf7-McTgkbnxbsLuQX3ePquSulQUB8ESs94R0nfD8aP-8H9pph88DnHAoRR0UNuBNaMFR16ARZAjRbf1JAZMpuYQYgw=w73-h73" width="100" height="100">
+    <span class="title_app">Cercube 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/youtube_cercube.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh6.googleusercontent.com/KBHCWqVAxHZhmVI3fKJ22z-Kyold2i2GuLcgB61CW91AzStwfn-bTcLtBdt-bu-KmIVTyDxMXKBCcEwgL_Y43SmB92lU1f14gzkn2VFGGuFYRJfR1SKPurjwaO9u0leti_0XBmMMeA=w73-h73" width="100" height="100">
+    <span class="title_app">Snapchat++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/tweaked/snap_plus.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<br><br><br><br>
+<hr class="solid_2">
+<br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/782321222985711626/utility_title.png" alt="Utility Apps" class="app_box_alt">
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/3RWnwgBFUwEj0_Iajukmxis85UGBn2MSGdUmo9R61u-JvvRqHtS7RebBgTYMA9bMjui7WW1mn8iHPx68y9u_XtfDPcPrrmV8e9wp5fWD4sHl_o2DQdyFnNheCiXkDJ7C17Jt0IShsA=w73-h73" width="100" height="100">
+    <span class="title_app">Sileo Demo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+    <a href="http://trentdev.net/ipa/util/sileo_demo.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/23JszRuW7kXpO89xx_YurFdhORco_RMWnrlKLhp-SZ4fLxA3KHhJPDeHU5W_nSz2ZybkbNNT-kfN_hUQgdnlniUdS6gFVIL8UiEk0gdQ0Tze8vrRLImUJZGDv2n7pDY9Uy4Au6U8GQ=w73-h73" width="100" height="100">
+    <span class="title_app">AirShou&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/util/airshou.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/mOzs_ltNjOgW9EuI8YOJ6r29RqucYJ-IZaaEoCOy7PovYo8YkvGDVCfh0e998A9Yr5zm0R8bqIkcrTc3fsLE4-oU4jtmvzFzlYW0p4MBZzRLlu_Ztfv8AoRTb_MWHSNNZ3x0i76oUw=w73-h73" width="100" height="100">
+    <span class="title_app">BatteryLife&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/util/batterylife.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/AJBZiR-mBxGZ5piY68fhbFpB0vNo0FBwIaMLAkcM9RB5JoK3CIVd-ElHrniC4u31Ah2mBYZHmuZr9njCSvc5YRN_2zjaMitpBY8ZPQiol6IcNaBTnTBU8zcA8ZAv4hjyxV1erIACqw=w73-h73" width="100" height="100">
+    <span class="title_app">iCleaner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/util/icleaner.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh6.googleusercontent.com/0GI_0Hk1LpmASSKC6qpqkfK7l_EGYKmqt1kxJ_crHhl_novECi4J8df5AoJw_ihdhvC2pVGPfNOgKG_VLuuY_stv_7spIIv4JfxT7-VNKfSgPlkL-ygwiC3MXGF3u9ZRwbFmaNzxkQ=w73-h73" width="100" height="100">
+    <span class="title_app">Clip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/util/clip.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://user-images.githubusercontent.com/9553519/80646366-3d271680-8a75-11ea-8b60-9c5edd4ffd60.png" width="100" height="100">
+    <span class="title_app">iTorrent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/util/itorrent.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<br><br><br><br>
+<hr class="solid_2">
+<br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/782321221643534376/emulator_title.png" alt="Emulator Apps" class="app_box_alt">
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/6Brg6iN9P_2z7Qv2no_RLfHwhpziRu_sY4VmF0Q--C9f-1G-zhUfE-NtfpOjmtUYe-d3LbZFcNr0uwIRBfJP4PFR84N62iFvxSZW7qrCO8Zcu_5GQbueS9h5HmCxdo4hDVpDtXulzQ=w73-h73" width="100" height="100">
+    <span class="title_app">UTM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/emu/utm.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/xOBU0IAZhKqBmrJCkxDrdnFm79fN-ijZqcGLa5Jg1G9uAyh4SBkCx4hNvXnt6BBSa3kn_Hg89dvNEkwVtnErQ4NXDQQfwHF_Vq76okYuJLJJy-Ra95gsjdvQRUPBJrolHqQ1LZFDdg=w73-h73" width="100" height="100">
+    <span class="title_app">Delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/emu/delta.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/MghIpD4GHaDioEMNGCcWeR6EW_Iul5sP2ARTzjfQHRnndZmZoV_w0a2qO8xoREV4QqPW2lp8SUOrgjz3twbU6YAnT4npE_eJ_4FWJEI34454xbB2-lDqULEWZdmJQ0rvbAGkCKo3eg=w73-h73" width="100" height="100">
+    <span class="title_app">DolphiniOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/emu/dolphinios.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<br><br><br><br>
+<hr class="solid_2">
+<br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/782358909616783381/jailbreak_title.png" alt="Emulator Apps" class="app_box_alt">
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh6.googleusercontent.com/mwRGvuJxqq4w_yanrpoh-EDnMOdQ0EJoCIow22z--SpuzpufnEQ0OWZVGlb6aS11x1Z5Sz88Id_jI7qd582hMYMtiXp2tsfnTDNq_q5LmAPMbQC-ovAGrWGKzj48Ql30xpCZ_Ydkdg=w73-h73" width="100" height="100">
+    <span class="title_app">Odyssey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/jb/odyssey.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/xTawQPWsJH3S7GdCAoVMiw1TUfoBSDaTsyPZjy0S1h5FYRv2IT0GoEpoHUp6my-tjzJRhsRg-3q0ZvlYLZavIRJ0UpwQPIMFaMLZDHD-cQfeCUf6tIvq-NCJh2pmp4TF9vC8nDXXFA=w73-h73" width="100" height="100">
+    <span class="title_app">Unc0ver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/jb/unc0ver.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh4.googleusercontent.com/3BiO-5FuC6FFRgfU43QuHylo2uJPNBXDVxqILmHFJJgUkomLL3NCiFlrIxH5OmK6rLuUK6eS2ZxlT-i8m4tDYhIFg8yx1yXt8A7N4BmMHbfkfRcLYHZltvr_9CjTbDJJeSpseeYJ7w=w73-h73" width="100" height="100">
+    <span class="title_app">Chimera&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/jb/chimera.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh5.googleusercontent.com/XG198oKioc4P2KDybH6OoRHbvwF2uKkLBmub4JsnGjgj_0RonCqnnqJMManrMl9jef9Yf6wzPpJiwTtxrtkT38s3Ygb7Zt1Vyblurxu1Tyv2xMhUfAI6FjgxdxPCPPvH-ciWABP-Xw=w73-h74" width="100" height="100">
+    <span class="title_app">Electra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/jb/electra.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<div class="app_box">
+    <img style="vertical-align: middle; margin-bottom: 15px;" src="https://lh3.googleusercontent.com/J7IK2zPbRKsCrvQqc1AA-oyjsmJh5M082bA_2XixE0Nax1SONyW6vDQcQHfkQpJc6BzJXmAoV2jT3g3vqcXCjgBvM2NElujexLu_XEz_WYqlUnvrUsUbu37MV8IeMnjp7hRsdZ_-5g=w73-h73" width="100" height="100">
+    <span class="title_app">H3lix&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="http://trentdev.net/ipa/jb/h3lix.html">
+        <button class="button button_get">Get</button>
+    </a>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+</div><br>
+<div class="navbar" style="margin-bottom: 20px">
+    <a href="http://trentdev.net/ipa/" class="active"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782192102574522398/star_icon.png" alt="Home" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+    <a href="" style="margin-left:173px;"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782200839241859083/star_icon.png" alt="IPA Collection" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+    <a href="http://trentdev.net/ipa/help/" style="margin-left:173px;"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782204706646130698/star_icon.png" alt="Jailbreaks" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+</div>
+</body>
+</html>

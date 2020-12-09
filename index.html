@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="https://raw.githubusercontent.com/Trent112232/apple-webapp/main/manifest.json">
+<link rel="apple-touch-icon" href="https://cdn.discordapp.com/attachments/385519229606035468/781811750420086804/apple-touch-icon.png">
+<link rel="icon" href="https://cdn.discordapp.com/attachments/385519229606035468/779782695798046720/624807220282130442.gif">
+<title>IPAStore</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style>
+#rgb_bg { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: rgb(66, 66, 66);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+</style>
+<style>
+.button_download {
+    width: 400px;
+    font-size: 50px;
+    background: rgb(0, 132, 255);
+    color: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+.button_get {
+    width: 100px;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.521);
+    border-color: rgb(0, 132, 255);
+    color: rgb(0, 132, 255);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: solid;
+    padding: 20px;
+}
+.button_refresh {
+    width: 300px;
+    font-size: 40px;
+    background: linear-gradient(rgb(0, 255, 200), rgb(0, 255, 136));
+    color: rgb(0, 0, 0);
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+.button_download:hover {
+  background-color: #0066ff;
+  color: white;
+}
+.title_app {
+    color: rgb(255, 255, 255);
+	font-family:verdana;
+    font-weight:bold;
+    font-size: 50px;
+    margin-left: 20px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+hr.solid_2 {
+  border-top: 3px solid #bbb;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+hr.solid_3 {
+  border-top: 3px solid #bbb;
+  margin-left: 350px;
+  margin-right: 350px;
+}
+.app_info {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 50px;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.menu_back {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.menu_back:hover {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.app_desc {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 35px;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.announcement_box {
+    width:700px;height:700px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -moz-box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -o-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    border-radius:110px;
+}
+.title_box {
+    width:800px;height:200px;
+    border: solid 1px #555;
+    background-color: #eed;
+    box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -moz-box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    -o-box-shadow: 0px 0px 25px  rgba(0,0,0,0.733);
+    border-radius:110px;
+}
+</style>
+<style>
+.app_box_twitch {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(98, 0, 255), rgb(129, 60, 255));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(76, 0, 255, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(76, 0, 255, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(76, 0, 255, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(76, 0, 255, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_reddit {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(255, 94, 0), rgb(255, 123, 0));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(255, 94, 0, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(255, 94, 0, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(255, 94, 0, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(255, 94, 0, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_youtube {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 84, 84));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(255, 0, 0, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(255, 0, 0, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(255, 0, 0, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(255, 0, 0, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_tiktok {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(0, 0, 0), rgb(43, 43, 43));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(0, 0, 0, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(0, 0, 0, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(0, 0, 0, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_spotify {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(20, 221, 20), rgb(89, 204, 118));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(20, 221, 71, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(20, 221, 71, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(20, 221, 71, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(20, 221, 71, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_twitter {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(0, 132, 255), rgb(102, 181, 255));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(0, 132, 255, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(0, 132, 255, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(0, 132, 255, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(0, 132, 255, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_facebook {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(0, 68, 255), rgb(49, 104, 255));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(0, 68, 255, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(0, 68, 255, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(0, 68, 255, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(0, 68, 255, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_whatsapp {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(79, 255, 123), rgb(153, 255, 178));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(79, 255, 123, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(79, 255, 123, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(79, 255, 123, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(79, 255, 123, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.app_box_snapchat {
+    width: 800px;
+    height: 140px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(255, 187, 0), rgb(255, 203, 33));
+    color: rgb(0, 0, 0);
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(255, 196, 0, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(255, 196, 0, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(255, 196, 0, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(255, 196, 0, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<style>
+.navbar {
+    width: 800px;
+    height: 117px;
+    font-size: 40px;
+    background: linear-gradient(to right,rgba(143, 143, 143, 0.904), rgb(143, 143, 143, 0.904));
+    color: white;
+    font-family: Verdana;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -moz-box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -webkit-box-shadow: 0px 0px 45px rgba(92, 92, 92, 0.678);
+    -o-box-shadow: 0px 0px 45px  rgba(92, 92, 92, 0.678);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    padding: 20px;
+    text-align: center;
+    margin-left: 82px;
+    margin-right: auto;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+}
+</style>
+</head>
+<body style="background-color: rgb(66, 66, 66);">
+<div id="rgb_bg" style="text-align:center;">
+<br><br><br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/781947222778052658/title.png" alt="IPAStore" width="800px" height="700px" class="title_box">
+<p style="font-size:40px;text-align: center;text-shadow: 0px 0px 2px black;font-family:verdana;color:rgb(255, 255, 255);font-weight:bolder;">The best place for unsigned IPAs</p>
+<br><br>
+<hr class="solid_2">
+<button class="button button_refresh" onClick="window.location.reload();">Refresh IPAStore</button>
+<br><br>
+<hr class="solid_2">
+<br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/781961458409668608/announcement_1.png" alt="Announcement" width="700px" height="700px" class="announcement_box">
+<br><br><br><br><br><br>
+<img src="https://cdn.discordapp.com/attachments/523529891619274773/781961461516992562/announcement_2.png" alt="Announcement" width="700px" height="700px" class="announcement_box">
+<br><br>
+<hr class="solid_3">
+<br><br>
+<h1 style="font-size:70px;text-align: center;text-shadow: 0px 0px 5px rgb(0, 0, 0);font-family:verdana;color:rgb(255, 255, 255);font-weight:bolder;">Credits</h1>
+<p style="font-size:40px;text-align: center;text-shadow: 0px 0px 2px black;font-family:verdana;color:rgb(255, 255, 255);font-weight:bolder;">IPAStore is a collection of IPA files, currently developed and maintained by Trent and Kernel Panicer.</p>
+<br><br><br><br><br><br><br><br><br><br>
+</div><br>
+<div class="navbar" style="margin-bottom: 20px">
+    <a href="" class="active"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782195764213579776/star_icon.png" alt="Home" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+    <a href="http://trentdev.net/ipa/tweaked/" style="margin-left:173px;"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782196789490745344/star_icon.png" alt="Jailbreaks" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+    <a href="http://trentdev.net/ipa/help/" style="margin-left:173px;"><img src="https://cdn.discordapp.com/attachments/523529891619274773/782204706646130698/star_icon.png" alt="Jailbreaks" width="80px" height="90px" style="vertical-align: middle; margin-bottom: 15px;"></a>
+</div>
+</body>
+</html>

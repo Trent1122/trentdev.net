@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="manifest" href="https://raw.githubusercontent.com/Trent112232/apple-webapp/main/manifest.json">
+<link rel="apple-touch-icon" href="https://cdn.discordapp.com/attachments/385519229606035468/781811750420086804/apple-touch-icon.png">
+<link rel="icon" href="https://lh4.googleusercontent.com/3BiO-5FuC6FFRgfU43QuHylo2uJPNBXDVxqILmHFJJgUkomLL3NCiFlrIxH5OmK6rLuUK6eS2ZxlT-i8m4tDYhIFg8yx1yXt8A7N4BmMHbfkfRcLYHZltvr_9CjTbDJJeSpseeYJ7w=w73-h73">
+<title>IPAStore - Altstore Tutorial</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style>
+#rgb_bg { 
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: rgb(66, 66, 66);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+</style>
+<style>
+.button_download {
+    width: 400px;
+    font-size: 50px;
+    background: rgb(0, 132, 255);
+    color: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+.button_download:hover {
+  background-color: #0066ff;
+  color: white;
+}
+.title_app {
+    color: rgb(0, 0, 0);
+	font-family:verdana;
+    font-weight:bold;
+    font-size: 100px;
+    margin-left: 20px;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.app_info {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 50px;
+    font-family: Verdana;
+    color:rgb(255, 255, 255);
+}
+.menu_back {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(255, 255, 255);
+}
+.menu_back:hover {
+    text-align: left;
+    margin-top: 40px;
+    margin-right: 700px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-weight: 400;
+    font-family: Verdana;
+    color:rgb(107, 107, 107);
+}
+.app_desc {
+    text-align: left;
+    padding-left: 100px;
+    font-size: 35px;
+    font-family: Verdana;
+    color:rgb(212, 212, 212);
+}
+</style>
+
+</head>
+<body style="background-color: rgb(66, 66, 66);">
+<div id="rgb_bg" style="text-align:center;">
+    <a href="http://trentdev.net/ipa/help/">
+    <button class="button menu_back">< Back</button>
+</a>
+<h1 style="text-align:center; font-family:Verdana; color:white; text-decoration: underline; text-align: left;">Requirements:</h1>
+<p style="text-align:center; font-family:Verdana; color:white; text-align: left;">
+    Filza (or any file manager really)<br>
+    <br>
+    AppSync Unified (cydia.akemi.ai)<br></p>
+
+<h2 style="text-align:center; font-family:Verdana; color:white; text-decoration: underline; text-align: left;">Steps:</h2>
+<p style="text-align:center; font-family:Verdana; color:white; text-align: left;">
+    1 - Download the Unsigned Ipa you want and Open it in Filza<br>
+    <br>
+    2 - Extract the Ipa in Filza<br>
+    <br>
+    3 - Go into the folder you extracted into the Payload and copy the .app file<br>
+    <br>
+    4 - Go to Root section on the side panel and press on the Applications folder you want to paste the .app into that folder<br>
+    <br>
+    5 - Go to /usr/bin/ and find 'uicache'. Press it, and let it run.<br>
+    <br>
+    You should now see the app on the home screen. If you have AppSync, you should now be able to open and use it. Enjoy!</p>
+</div><br>
+</body>
+</html>
